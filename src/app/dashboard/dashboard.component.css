@@ -1,0 +1,75 @@
+/* Parent container styles */
+.parent {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Left sidebar styles */
+.left {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    padding: 20px; /* Padding inside the sidebar */
+    box-sizing: border-box; /* Include padding in the width */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    /* justify-content: space-between;  */
+}
+
+/* Heading style */
+.left h1 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Line separator */
+.left hr {
+    border: 0;
+    height: 1px;
+    background-color: #495057; /* Dark gray line */
+    margin: 20px 0; /* Space above and below the line */
+}
+
+/* Sidebar links */
+.left a {
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    padding: 10px 0; /* Padding above and below each link */
+    display: block; /* Full width clickable area */
+    font-size: 18px; /* Slightly larger text */
+}
+
+/* Hover effect for links */
+.left a:hover {
+    background-color: #495057; /* Darker background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Logout button styles */
+.left button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Space inside the button */
+    background-color: #dc3545; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Slightly larger text */
+}
+
+/* Hover effect for the button */
+.left button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Right content area */
+.right {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 20px; /* Padding inside the content area */
+    box-sizing: border-box; /* Include padding in the width */
+    background-color: teal; /* White background */
+    overflow: auto;
+    padding-bottom: 200px;
+}

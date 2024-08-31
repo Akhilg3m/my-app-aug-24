@@ -1,0 +1,20 @@
+<div class="parent">
+
+    <div class="left">
+        <h1>My Website</h1>
+        <hr>
+        <a routerLink="home">Home</a>
+        <a routerLink="welcome">Welcome</a>
+        <a routerLink="data-binding">Data Binding</a>
+        <a routerLink="calculator">Calculator</a>
+        <a routerLink="directives-pipes">Directives Pipes</a>
+        <a routerLink="employees">Employees</a>
+        <a routerLink="vehicles">Vehicles</a>
+        <a routerLink="create-vehicle">Create Vehicle</a>
+        <hr>
+        <button (click)="logout()">logout</button>
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>
