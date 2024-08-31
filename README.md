@@ -199,9 +199,10 @@ GIT:
     3) Code Sync 
     =============
 
-        git add .
-        git commit -m "XXXXXXXXX"
+        git add .                       (changes -> staged changes)
+        git commit -m "XXXXXXXXX"       (staged changes -> zero)
         git push
+
 
 
 
