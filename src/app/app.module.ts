@@ -17,6 +17,13 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { SiblingComponent } from './sibling/sibling.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +39,14 @@ import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
     EmployeesComponent,
     VehiclesComponent,
     CreateVehicleComponent,
-    ViewVehicleComponent
+    ViewVehicleComponent,
+    CreateUserComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    SiblingComponent,
+    Sibling1Component,
+    Sibling2Component
   ],
   imports: [
     BrowserModule,

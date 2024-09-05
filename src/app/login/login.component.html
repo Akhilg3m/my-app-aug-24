@@ -12,6 +12,10 @@
 
             <label for="">Password:</label>
             <input type="password" formControlName="password">
+            <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                <p class="error" *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</p>
+                <p class="error" *ngIf="loginForm.get('password')?.errors?.['pattern']">Password should contain 1char, 1num, 1 spe, min 8 char</p>
+            </div>
             <br>
 
             <button (click)="login()">login</button>

@@ -13,6 +13,9 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { ParentComponent } from './parent/parent.component';
+import { SiblingComponent } from './sibling/sibling.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -27,6 +30,9 @@ const routes: Routes = [
     {path:'create-vehicle', component: CreateVehicleComponent},
     {path:'view-vehicle/:id', component:ViewVehicleComponent},
     {path:'edit-vehicle/:id', component: CreateVehicleComponent},
+    {path:'create-user', component: CreateUserComponent},
+    {path:'parent', component:ParentComponent},
+    {path:'sibling', component: SiblingComponent},
     {path:'',component:WelcomeComponent}
   ]},
   {path:'', component:LoginComponent},

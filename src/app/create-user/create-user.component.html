@@ -1,0 +1,106 @@
+<h1>Create User Form</h1>
+
+<form [formGroup]="userForm">
+
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+        <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
+        <p class="error" *ngIf="userForm.get('name')?.errors?.['minlength']">Minimum 3 charecters required.</p>
+        <p class="error" *ngIf="userForm.get('name')?.errors?.['maxlength']">Maximum 10 charecters only.</p>
+    </div>
+    <br>
+
+    <label for="">Age:</label>
+    <input type="text" formControlName="age">
+    <div *ngIf="userForm.get('age')?.touched && userForm.get('age')?.invalid">
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['required']">Age is required</p>
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['min']">Minimum 18 years.</p>
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['max']">Maximum 60 years.</p>
+    </div>
+    <br>
+
+    <label for="">Phone:</label>
+    <input type="number" formControlName="phone">
+    <div *ngIf="userForm.get('phone')?.touched && userForm.get('phone')?.invalid">
+        <p class="error" *ngIf="userForm.get('phone')?.errors?.['required']">phone is required</p>
+        <p class="error" *ngIf="userForm.get('phone')?.errors?.['min']">Minimum 10 digits.</p>
+        <p class="error" *ngIf="userForm.get('phone')?.errors?.['max']">Maximum 10 digits only.</p>
+    </div>
+    <br>
+
+    <label for="">Email:</label>
+    <input type="text" formControlName="email">
+    <div *ngIf="userForm.get('eamil')?.touched && userForm.get('eamil')?.invalid">
+        <p class="error" *ngIf="userForm.get('eamil')?.errors?.['required']">eamil is required</p>
+        <p class="error" *ngIf="userForm.get('eamil')?.errors?.['email']">Invalid email format.</p>
+    </div>
+    <br>
+
+    <div formGroupName="address">
+
+        <label for="">State:</label>
+        <input type="text" formControlName="state">
+        <div *ngIf="userForm.get('address')?.get('state')?.touched && userForm.get('address')?.get('state')?.invalid">
+            <p class="error" *ngIf="userForm.get('address')?.get('state')?.errors?.['required']">state is required</p>
+        </div>
+        <br>
+
+        <label for="">Pincode:</label>
+        <input type="text" formControlName="pincode">
+        <br>
+
+    </div>
+
+    <label for="">Type:</label>
+    <label for="">Day Schoolor:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholor">
+    <label for="">Residential:</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <br>
+
+    <div *ngIf="userForm.get('type')?.value=='dayScholor'">
+        <label for="">Bus Fee:</label>
+        <input type="text" formControlName="busFee">
+        <br>
+    </div>
+
+    <div *ngIf="userForm.get('type')?.value=='residential'">
+        <label for="">Hostel Fee:</label>
+        <input type="text" formControlName="hostelFee">
+        <br>
+    </div>
+
+    <button (click)="addCard()">Add Card</button><br><br>
+
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+
+                <h3>Card {{i+1}}</h3>
+
+                <label for="">Number:</label>
+                <input type="number" formControlName="number">
+                <div *ngIf="cardsFormArray.controls[i]?.get('number')?.touched && cardsFormArray.controls[i]?.get('number')?.invalid">
+                    <p class="error" *ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['required']">Card number is requried.</p>
+                </div>
+                <br>
+
+                <label for="">Expiry:</label>
+                <input type="month" formControlName="expiry">
+                <br>
+
+                <label for="">CVV:</label>
+                <input type="number" formControlName="cvv">
+                <br>
+
+                <button (click)="delete(i)">delete</button><br><br>
+
+            </div>
+        </div>
+    </div>
+
+
+    <button (click)="submit()">submit</button>
+
+</form>

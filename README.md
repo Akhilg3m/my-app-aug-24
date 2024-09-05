@@ -162,17 +162,6 @@ ALL POSSIBLE API CALLS:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 GIT:
 ----
 
@@ -201,17 +190,54 @@ GIT:
 
         git add .                       (changes -> staged changes)
         git commit -m "XXXXXXXXX"       (staged changes -> zero)
-        git push
+        git push                        (100%,  commit in github)
+
+
+
+REACTIVE FORMS:
+===============
+
+    1) FormGroup
+    2) NestedFormGroup
+    3) Dynamic Forms
+    4) FormArray
+    5) FormValidations
+
+
+    ts:
+    ====
+        age: new FormControl('', [Validators.required, Validatros.minLength])
+
+    html:
+    =====
+
+        <div *ngIf="CONTROL?.touched && CONTROL?.invalid">
+
+            <p class="error" *ngIf="CONTROL?.errors?.['required']">Age is required</p>
+            <p class="error" *ngIf="CONTROL?.errors?.['min']">Minimum 18 years.</p>
+            <p class="error" *ngIf="CONTROL?.errors?.['max']">Maximum 60 years.</p>
+
+        </div>
+
+        CONTROL:
+        ========
+
+            fromGroup:       userForm.get('age')
+
+            nestedFormGroup  userForm.get('address')?.get('pincode')
+
+            formArray:       cardsFormArray.controls[i]?.get('cvv')
 
 
 
 
 
+    Component Communication:
+    ========================
 
-
-
-
-
+        1) parent to child
+        2) child to parent
+        3) sibling communication
 
 
 
