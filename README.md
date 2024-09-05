@@ -241,7 +241,17 @@ REACTIVE FORMS:
 
 
 
+    MODUULE COMMUNICATION:
+    ======================
+    1) Eager Loading:
+    -----------------
 
+        -> Create a feature module  (ng g m XXXXXXXXXX)
+        -> Import that feature module in app module
+
+    2) 
+    
+    3) 
 
 
 

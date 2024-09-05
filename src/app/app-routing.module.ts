@@ -16,6 +16,7 @@ import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ParentComponent } from './parent/parent.component';
 import { SiblingComponent } from './sibling/sibling.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
     {path:'create-user', component: CreateUserComponent},
     {path:'parent', component:ParentComponent},
     {path:'sibling', component: SiblingComponent},
+    {path:'about-company', component:AboutCompanyComponent},
     {path:'',component:WelcomeComponent}
   ]},
   {path:'', component:LoginComponent},
