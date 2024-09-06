@@ -26,6 +26,7 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { AboutUsModule } from './about-us/about-us.module';
 import { CapitalDirective } from './capital.directive';
+import { PricePipe } from './price.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { CapitalDirective } from './capital.directive';
     SiblingComponent,
     Sibling1Component,
     Sibling2Component,
-    CapitalDirective
+    CapitalDirective,
+    PricePipe
   ],
   imports: [
     BrowserModule,

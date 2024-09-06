@@ -40,7 +40,7 @@
     <div formGroupName="address">
 
         <label for="">State:</label>
-        <input type="text" formControlName="state">
+        <input type="text" formControlName="state" appCapital>
         <div *ngIf="userForm.get('address')?.get('state')?.touched && userForm.get('address')?.get('state')?.invalid">
             <p class="error" *ngIf="userForm.get('address')?.get('state')?.errors?.['required']">state is required</p>
         </div>
