@@ -243,15 +243,34 @@ REACTIVE FORMS:
 
     MODUULE COMMUNICATION:
     ======================
+    
     1) Eager Loading:
     -----------------
 
         -> Create a feature module  (ng g m XXXXXXXXXX)
         -> Import that feature module in app module
 
-    2) 
+    2) Lazy Loading
+    ----------------
+
+        -> Create module with rougint module  (ng g m XXX  --routing=true)
     
-    3) 
+        -> create lazy loading path
+
+                {
+                    path: 'payments',
+                    loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+                }
+
+    3) Pre Loading
+    --------------
+
+        Downloading lazy loading modue immediatly after download the eager module.
+
+        RouterModule.forRoot(routes, {preloadingStrategy:PreloadAllModules})
+
+
+
 
 
 

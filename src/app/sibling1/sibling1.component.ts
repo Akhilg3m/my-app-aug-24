@@ -20,4 +20,8 @@ export class Sibling1Component {
     this._commonService.addToCart();
   }
 
+  submit(){
+    
+  }
+
 }
