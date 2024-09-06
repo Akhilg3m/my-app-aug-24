@@ -25,6 +25,7 @@ import { SiblingComponent } from './sibling/sibling.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { AboutUsModule } from './about-us/about-us.module';
+import { CapitalDirective } from './capital.directive';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AboutUsModule } from './about-us/about-us.module';
     RatingComponent,
     SiblingComponent,
     Sibling1Component,
-    Sibling2Component
+    Sibling2Component,
+    CapitalDirective
   ],
   imports: [
     BrowserModule,
